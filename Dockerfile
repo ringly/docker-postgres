@@ -5,7 +5,10 @@ MAINTAINER Peter Coles <peter@ringly.com>
 
 ENV DB_NAME ringly
 ENV DB_USER postgres
-ENV DB_PASS
+# ENV DB_PASS
+
+ENV DB_READONLY_USER readly
+# ENV DB_READONLY_PASS
 
 ADD setupRemoteConnections.sh /docker-entrypoint-initdb.d/setupRemoteConnections.sh
 RUN chmod 755 /docker-entrypoint-initdb.d/setupRemoteConnections.sh
